@@ -126,7 +126,7 @@ public class STPSolver extends AbstractSolver{
         }
         while (!sc.getChoiceGenerator().isDone()){//TODO replace the 'alternatives' loop with this loop
           VC vc = new VC();
-          VC.setFlags('a');//turn off optimizations - it makes it faster because our constraints are simple
+          //VC.setFlags('a');//turn off optimizations - it makes it faster because our constraints are simple
           sc.setVC(vc);
           nativeEncodingTimer.start();
           Expr full = expr.getExpr(sc, 0);

@@ -47,6 +47,12 @@ public final class CharacterEncoding{
         return decodeString(str, false);
       else
         return decodeString(toBinary(str), true);
+    } else if (str.startsWith("0x")){
+      str = str.substring("0x".length()).trim();
+      if (ENC >= 2)
+        return decodeString(str, false);
+      else
+        return decodeString(toBinary(str), true);
     }else if (str.startsWith("0bin")){
       str = str.substring("0bin".length()).trim();
       return decodeString(str, true);
